@@ -75,11 +75,11 @@ spec:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
       - image: grafana/grafana
-    name: grafana
-    ports: 
-      - containerPort: 3000
-        protocol: TCP
-      env:
+        name: grafana
+        ports: 
+        - containerPort: 3000
+          protocol: TCP
+        env:
         - name: "GF_DATABASE_TYPE"
           value: "mysql"
         - name: "GF_DATABASE_HOST"
